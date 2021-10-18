@@ -33,6 +33,60 @@ async def human(message: types.Message):
     await message.answer("Выбери, того у кого ты хочешь купить, и отправь мне его номер")
 
 #Выбор продолжения если Категории товаров
+@dp.message_handler(lambda message: message.text == "Чипсы")
+async def goods(message: types.Message):
+    await message.answer("Ладно, вот тебе список")
+    await message.answer("Выбери, что ты хочешь купить, и отправь мне его номер")
+
+@dp.message_handler(lambda message: message.text == "Шоколад и шоколадные батончики")
+async def goods(message: types.Message):
+    await message.answer("Выбери, что тебе нужно", reply_markup=kb.kb_chocolate)
+
+@dp.message_handler(lambda message: message.text == "Напитки")
+async def goods(message: types.Message):
+    await message.answer("Выбери, что тебе нужно", reply_markup=kb_drinks)
+
+@dp.message_handler(lambda message: message.text == "Продукты быстрого приготовления")
+async def goods(message: types.Message):
+    await message.answer("Ладно, вот тебе список")
+    await message.answer("Выбери, что ты хочешь купить, и отправь мне его номер")
+
+@dp.message_handler(lambda message: message.text == "Другие продукты")
+async def goods(message: types.Message):
+    await message.answer("Ладно, вот тебе список")
+    await message.answer("Выбери, что ты хочешь купить, и отправь мне его номер")
+
+@dp.message_handler(lambda message: message.text == "Другие товары")
+async def goods(message: types.Message):
+    await message.answer("Ладно, вот тебе список")
+    await message.answer("Выбери, что ты хочешь купить, и отправь мне его номер")
+
+#Выбор напитков
+@dp.message_handler(lambda message: message.text == "Энергетики)
+async def goods(message: types.Message):
+    await message.answer("Ладно, вот тебе список")
+    await message.answer("Выбери, что ты хочешь купить, и отправь мне его номер")
+
+@dp.message_handler(lambda message: message.text == "Соки")
+async def goods(message: types.Message):
+    await message.answer("Ладно, вот тебе список")
+    await message.answer("Выбери, что ты хочешь купить, и отправь мне его номер")
+
+@dp.message_handler(lambda message: message.text == "Газировка)
+async def goods(message: types.Message):
+    await message.answer("Ладно, вот тебе список")
+    await message.answer("Выбери, что ты хочешь купить, и отправь мне его номер")
+
+#Выбор шоколада
+@dp.message_handler(lambda message: message.text == "Шоколад")
+async def goods(message: types.Message):
+    await message.answer("Ладно, вот тебе список")
+    await message.answer("Выбери, что ты хочешь купить, и отправь мне его номер")
+
+@dp.message_handler(lambda message: message.text == "Шоколадные батончики")
+async def goods(message: types.Message):
+    await message.answer("Ладно, вот тебе список")
+    await message.answer("Выбери, что ты хочешь купить, и отправь мне его номер")
 
 if __name__ == '__main__':
     executor.start_polling(dp)
